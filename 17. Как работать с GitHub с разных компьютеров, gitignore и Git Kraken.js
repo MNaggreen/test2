@@ -13,6 +13,8 @@ git clone https://github.com/MNaggreen/test2.git git project_2*/
 git add -A
 git commit -a -m"index.html new ver." 
 git push Данные сразу загружаються на сервер*/
+
+
 /* то есть на гитхабе проект измениться тоже
 который оригинальный
 т.к. мы клонировали репозиторий */
@@ -59,4 +61,6 @@ ctrl + c
 устанавливаем и регистрируемся
 в ней нажимае Open
  open repositry
+ там можно смотреть изменения 
+ делать pull push Наших репозиториев
  */
