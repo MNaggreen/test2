@@ -6,12 +6,23 @@
 git init
  */
 
+/* 
+git init подготовка к работе
+git config --global user.name "Nikolay" установка имени
+git config --global user.email "nickolas1594@mail.ru" установка почты
+git status проверка статуса фалов
+git add -A добавление все папок и файлв в репозиторий
+git commit -a -m"first commit" зоздание котрольной точки
+git remote add origin https://github.com/MNaggreen/test2.git 
+добавление источника для загрузки
+git push -u origin master загрузка непосредственно 
+на источник указанный выше*/
 
 
 /* чтобы представиться нужно
 git config --global user.name "Nikolay"
 git config --global user.email "nickolas1594@mail.ru"
-чтобы проверитизенения заходим в папку git
+чтобы проверит изменения заходим в папку git
 которая создалась в нашем проекте и там в файле config 
 смотрим изменения*/
 
@@ -35,14 +46,57 @@ git status поможет определить какой статус у про
 
 git add -A 
 или
-git add main.css*/
+git add main.css
+git remote add origin https://github.com/MNaggreen/test2.git сыллка новая будет*/
+
 
 
 
 /* создаем комит(котрольную точку)
 git commit -a -m"first commit" 
 Где a это все файлы
-а m это сообщение к нашему изменению*/
+а m это сообщение к нашему изменению
+после этого гит перестанет следить за всеми файлами*/
+
+/*  нужно заного проделать операции выши
+только с другим коммитом */
+
+
+
+/* git log посмотреть логи коммитов */
+
+/* создаем репозиторий на github вручную
+заходим на сайт там в раздел 
+репозитории
+ - new 
+ вписываем информацию
+ копируем команду
+ git remote add origin https://github.com/MNaggreen/test2.git
+ теперь наш гитхаб связан с проектом
+ далее мы добавляем в рупозиторий в интернете файлы
+ git push -u origin master
+ y говорит о том что все файлы будут после изменения пушиться сюда
+ далуу гитхаб хочет Master заменить на Main*/
+
+ /* то есть после создание проекта не добавляем readme
+ и в списе команд увидим
+ git branch -M main
+ это значит что мы Master ветку переиминовываем на 
+ main 
+ и далее естественно
+ команда меняется
+ git push -u origin main*/
+
+
+
+
+ /* краткая шпаргалка
+ git status
+  git add -A
+  git commit -a -m"new message example"
+  git status
+  git push
+  все*/
 
 
 
