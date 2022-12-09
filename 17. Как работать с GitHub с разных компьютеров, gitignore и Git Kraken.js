@@ -6,7 +6,7 @@ clone or download там есть ссылка команду терминала
 
 /* далее ссылку которую мы взяли
 вставляем в команду 
-git clone https://github.com/MNaggreen/test2.git git project_2*/
+git clone https://github.com/MNaggreen/test2.git project_2*/
 /* где 1 это каманда, 2 ссылка, 3 имя папки */
 
 /* дальше как обычно пишем 
