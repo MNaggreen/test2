@@ -144,8 +144,65 @@ function afterDecimal(num) {
       return 0;
     }
     const ans = num.toString().split('.')[1];
-    
+    /* создаемсписок из мичла и переделывем его в строку */
     return parseInt(ans);
 }
 
 console.log(typeof(afterDecimal(1.123)));
+
+
+let a = '53';
+console.log(a.slice(1, 2));
+
+
+
+function getTimeFromMinutes(num) {
+    let minute = 0;
+    let res = '';
+    let min = '';
+    let hour = 0;
+    let lastmin = 0;
+    let ans = ''; 
+    if (num < 0) {        
+        return 'Ошибка, проверьте данные'; 
+    } if (num < 60) {
+        minute = num;
+        res = minute.toString().split('.');        
+        min = res[0];
+        lastmin = parseInt(min.slice(1, 2)); 
+        lastmin = parseInt(lastmin);
+        
+        
+    } if (num > 60) {
+        minute = num / 60;   
+        res = minute.toString().split('.');  
+        min = res[1].slice(0, 2);
+        lastmin = parseInt(min.slice(1, 3));
+        hour = parseInt(res[0]); 
+        lastmin = parseInt(lastmin); 
+        min = parseInt(min);   
+    } if (min > 60) {
+        min = min - 60;
+        hour += 1;              
+    } if (hour === 1) {
+        ans = `Это ${hour} час `;        
+    } if (hour > 1 && hour < 5) {
+        ans = `Это ${hour} часа `;        
+    } if (hour > 5 || hour === 0) {
+        ans = `Это ${hour} часов `;        
+    } if (lastmin === 1) {        
+        ans += `и ${min} минута`;        
+    } if (lastmin > 1 && lastmin < 5) {        
+        ans += `и ${min} минуты`;        
+    } if (lastmin > 5 || lastmin === 0) {        
+        ans += `и ${min} минут`;          
+}
+console.log(ans);
+console.log(lastmin);
+return ans;
+}
+
+console.log(getTimeFromMinutes(53)); 
+
+
+
