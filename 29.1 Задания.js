@@ -200,7 +200,9 @@ findMaxNumber(1, 5, '6', '10');  =>  0
 
 Если у вас получилось немного по другому, но решение засчитывается - то все в порядке. Помните, что вариантов решения всегда несколько.
 
-Но постарайтесь решить самостоятельно 🙂 */
+Но постарайтесь решить самостоятельно 🙂
+
+ */
 function getTimeFromMinutes(num) {
     let minute = 0;
     let minuteFloor;
@@ -275,7 +277,8 @@ console.log(Math.floor(2,5));
 
 function findMaxNumber(...args) {    
     const ans = [...args];
-    const res = [];  
+    const res = [];
+     
     if (ans.length < 4) {
         return 0;
     } 
@@ -296,3 +299,29 @@ function findMaxNumber(...args) {
 console.log( findMaxNumber(1, 5, 6.6, '10', '11'));
 console.log(Number.isInteger(6.6));
 
+
+
+
+
+function fib(num) {
+ let res = '0 1';
+ let fib = [0, 1];
+ let inf = num;
+ let check = inf.toString().split('.');    
+ if ( num === 0 || typeof(num) === 'string' || check.length > 1) {
+    return '';
+ }
+ if (num  === 1) {
+    return '0';
+ }
+ for (let i = 2; i <= num-1; i++) {
+        
+        fib[i] = fib[i-2] + fib[i-1];
+        res += ' ' + fib[i].toString();
+    }
+    console.log(typeof(res));
+
+return res;
+}
+
+console.log(fib(1.1));
