@@ -162,6 +162,62 @@ console.log(newObj);
 
 
 
-/* 4 способ для обЪекта ГЛАВНЫЙ */
+/* 4 способ для обЪекта ГЛАВНЫЙ structuredClone*/
+
+// Create an object with a value and a circular reference to itself.
+const original = { name: "MDN" };
+original.itself = original;
+
+// Clone it
+const clone = structuredClone(original);
+
+console.assert(clone !== original); // the objects are not the same (not same identity)
+console.assert(clone.name === "MDN"); // they do have the same values
+console.assert(clone.itself === clone); // and the circular reference is preserved
 
 
+
+
+/* 5 способ если 4 не работает используем JSON  */
+
+/* 
+JSON.stringify для преобразования объектов в JSON.
+JSON.parse для преобразования JSON обратно в объект.
+*/
+
+const restorantData = {
+    menu: [
+        {
+            name: 'Salad Caesar',
+            price: '14$'
+        },
+        {
+            name: 'Pizza Diavola',
+            price: '9$'
+        },
+        {
+            name: 'Beefsteak',
+            price: '17$'
+        },
+        {
+            name: 'Napoleon',
+            price: '7$'
+        }
+    ],
+    waitors: [
+        {name: 'Alice', age: 22}, {name: 'John', age: 24}
+    ],
+    averageLunchPrice: '20$',
+    openNow: true
+};
+
+function transferWaitors(data) {
+    const copy = JSON.parse(JSON.stringify(data)); 
+    
+   
+    copy.waitors[0] = {name: 'Mike', age: 32};
+    console.log(data);
+    return copy;
+}
+
+console.log(transferWaitors(restorantData));
